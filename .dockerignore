@@ -1,0 +1,4 @@
+// use this file to ignore local files and directories that should not be included in the Docker image
+node_modules
+Dockerfile
+docker-compose*
