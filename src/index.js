@@ -28,12 +28,12 @@ mongoose
 
 app.get('/', (req, res) => {
   redisClient.set('Products' , 'products data from Redis');
-  res.send('<h1>Hello, World! Dev2 On AWS</h1><p>Welcome to my Node.js application running in a Docker container!</p>');
+  res.send('<h1>Hello, World! Dev2 On AWS using Docker Hub</h1><p>Welcome to my Node.js application running in a Docker container!</p>');
 });
 
 app.get('/data', async (req, res) => {
  const productsData = await redisClient.get('Products');
-  res.send(`<h1>Hello, World! Dev2 On AWS</h1><h2>${productsData}</h2>`);
+  res.send(`<h1>Hello, World! Dev2 On AWS using Docker Hub</h1><h2>${productsData}</h2>`);
 });
 
 app.listen(port , () => {
